@@ -16,7 +16,7 @@
       }
 
       body {
-        background: #e3e0e0;
+        background: #a4d8a4; /* Màu xanh lá nhẹ nhàng */
       }
 
       .name{
@@ -27,7 +27,9 @@
       #cake {
         display: block;
         position: relative;
-        margin: -10em auto 0 auto;
+        margin: -18em auto 0 auto;
+        width: 250px;
+        transform: scale(1.2);
       }
 
       /* ============================================== Candle
@@ -37,11 +39,11 @@
         background: #ffffff;
         border-radius: 10px;
         position: absolute;
-        top: 228px;
+        top: 135px;
         left: 50%;
-        margin-left: -2.4px;
+        margin-left: -3px;
         margin-top: -8.33333333px;
-        width: 5px;
+        width: 6px;
         height: 35px;
         transform: translateY(-300px);
         backface-visibility: hidden;
@@ -72,8 +74,8 @@
         position: absolute;
         top: -20px;
         left: 50%;
-        margin-left: -2.6px;
-        width: 6.66666667px;
+        margin-left: -3.2px;
+        width: 8px;
         height: 18px;
       }
       .fuego:nth-child(1) {
@@ -120,8 +122,20 @@
         font-weight: 300;
         font-style:italic;
         text-align: center;
-        h1 {
-          font-size: 1.4em;
+        background: rgba(255, 255, 255, 0.7); /* Thêm background mờ để text dễ đọc hơn */
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 600px;
+        margin: 0 auto;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -14%);
+      }
+
+      @media screen and (max-width: 768px) {
+        .text {
+          width: 85%;
         }
       }
     </style>
@@ -134,8 +148,8 @@
         <div class="fuego"></div>
         <div class="fuego"></div>
       </div>
-      <svg id="cake" version="1.1" x="0px" y="0px" width="200px" height="500px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve">
-        <path fill="#a88679" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
+      <svg id="cake" version="1.1" x="0px" y="0px" width="250px" height="500px" viewBox="0 0 200 500" enable-background="new 0 0 200 500" xml:space="preserve">
+        <path fill="#8ec07c" d="M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
         c44.697,0,96.586,0,147.334,0C177.667-29.942,177.668-13.94,173.667-13.94z">
             <animate id="bizcocho_3" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1" begin="relleno_2.end" dur="0.3s" fill="freeze" values="
                               M173.667-13.94c-49.298,0-102.782,0-147.334,0c-3.999,0-4-16.002,0-16.002
@@ -172,7 +186,7 @@
         c0,0-4.125-4.983,0-7.823c5.201-3.58,16.085,0,23.725,0c8.841,0,20.762,0,20.762,0c3.686,0,8.597,0,19.511,0H102.242z
                               " />
         </path>
-        <path fill="#a88679" d="M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
+        <path fill="#8ec07c" d="M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
         c43.566,0,97.96,0,147.334,0C177.667-31.931,177.666-15.929,173.667-15.929z">
             <animate id="bizcocho_2" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0.25 0 0.58 1" begin="relleno_1.end" dur="0.5s" fill="freeze" values="
                               M173.667-15.929c-46.512,0-105.486,0-147.334,0c-3.999,0-4-16.002,0-16.002
@@ -209,7 +223,7 @@
         c-4.109,0.65-3.01-10.006,0-10.006C37.129,451.394,149.379,451.394,173.667,451.394z
                               " />
         </path>
-        <path fill="#a88679" d="M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
+        <path fill="#8ec07c" d="M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
         C177.668,5.569,177.667,21.571,173.667,21.571z">
             <animate id="bizcocho_1" attributeName="d" calcMode="spline" keySplines="0 0 1 1; 0 0 1 1; 0 0 1 1; 0.25 0 1 1; 0 0 1 1; 0.25 0 0.6 1" begin="2s" dur="0.8s" fill="freeze" values="
                               M173.667,21.571c-33.174,0-111.467,0-147.334,0c-4,0-4-16.002,0-16.002c39.836,0,105.982,0,147.334,0
@@ -283,15 +297,19 @@
         <rect x="10" y="475.571" fill="#fefae9" width="180" height="4" />
       </svg>
       <div class="text">
-      <h1 style="font-size: 2.5rem; font-family: 'Lato', sans-serif; font-weight: 700; color: #e84a5f; max-width: 600px; margin: 0 auto;">Happy Birthday, Odinson!</h1>
+      <h1 style="font-size: 20px; font-family: 'Lato', sans-serif; font-weight: 700; color: #e84a5f; max-width: 600px; margin: 0 auto;">Happy Birthday, Odinson!</h1>
       <br>
       <p 
       class="name"
-      style="font-size: 1.5rem; font-family: 'Lato', sans-serif; font-weight: 500; color: #e84a5f; max-width: 600px; margin: 0 auto; line-height: 1.6;"
+      style="font-size: 16px; font-family: 'Lato', sans-serif; font-weight: 500; color: #e84a5f; max-width: 600px; margin: 0 auto; line-height: 1.6;"
       >
-        Wishing you a day filled with success, happiness, and unforgettable moments. Thank you for your inspiring leadership and continuous support. May this year bring you even more achievements and joy.
-        <br>  
-        Have a fantastic birthday!
+      You... Yes, YOU.<br>🔥 Sexy Boss Supreme 🔥<br>🎊 Happy New Age!!! 🎊
+      <br>
+      May your day be filled with:<br>
+      💻 Zero meetings<br>
+      🎂 Endless cake<br>
+      📺 Only the good kind of drama (aka your fave series, not the office kind kkkk)<br>
+      Thanks for slaying deadlines, dodging chaos like a pro, and reminding us daily that leadership can be fierce and fabulous. 😎
       </p>
       <p style="text-align: right; max-width: 600px; margin: auto;">
         Team Floor 2
